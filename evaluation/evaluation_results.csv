@@ -1,0 +1,11 @@
+question,expected_sources,actual_sources,routing_correct,validation_status
+Can AI be used to screen job applicants?,"eu_ai_act,gdpr","eu_ai_act,gdpr",True,passed
+What rights do individuals have regarding automated decision making?,gdpr,gdpr,True,passed
+How should organizations manage AI bias?,nist_ai_rmf,nist_ai_rmf,True,passed
+What are high-risk AI systems?,eu_ai_act,eu_ai_act,True,passed
+Is facial recognition allowed in public spaces?,"eu_ai_act,gdpr","eu_ai_act,gdpr",True,failed
+How should AI systems be monitored after deployment?,"eu_ai_act,nist_ai_rmf",nist_ai_rmf,False,passed
+What is profiling under GDPR?,gdpr,gdpr,True,passed
+What governance practices are recommended for AI systems?,nist_ai_rmf,nist_ai_rmf,True,passed
+Are biometric identification systems regulated?,"eu_ai_act,gdpr","eu_ai_act,gdpr",True,passed
+How should organizations evaluate AI risks?,nist_ai_rmf,nist_ai_rmf,True,passed
