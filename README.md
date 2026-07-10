@@ -15,6 +15,33 @@ The system retrieves evidence from policy documents, generates answers using an 
 
 ---
 
+# Live Demo
+
+Try the deployed Streamlit app:
+
+[Agentic AI Policy RAG Assistant](https://agentic-ai-policy-rag-2ywqecwxmuv55qikdtdcsh.streamlit.app/)
+
+Note: The demo runs on free-tier hosting and free/limited LLM inference, so it may sleep when inactive or temporarily hit rate limits.
+
+---
+
+# Deployment
+
+This project is deployed as a Streamlit web application connected to the GitHub repository. New commits pushed to the deployed branch trigger an automatic rebuild and app update on Streamlit Community Cloud.
+
+Deployment stack:
+
+* Streamlit Community Cloud for the hosted UI
+* GitHub-based deployment workflow
+* ChromaDB persisted vector store for retrieval
+* Hugging Face sentence-transformer embeddings
+* Groq-hosted LLM inference
+* LangGraph for multi-step agent orchestration
+
+Secrets such as `GROQ_API_KEY` are configured in Streamlit Cloud secrets and are not committed to the repository.
+
+---
+
 # Project Overview
 
 AI regulation documents are long, complex, and difficult to search manually. This project builds an Agentic RAG assistant that can answer policy-related questions using retrieved evidence from regulatory documents.
