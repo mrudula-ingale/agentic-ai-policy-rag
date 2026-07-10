@@ -69,6 +69,8 @@ Rules:
 8. If the context places a use case under employment, education, biometric, or safety categories, describe it as "regulated" or "potentially high-risk", not automatically prohibited.
 9. Prefer cautious wording: "may be", "appears to", "based on the retrieved context".
 10. Do not mention article numbers unless the retrieved context clearly shows the article heading and the claim comes from that same source. If the source is an annex/list/category without a visible article number, refer to it as "the retrieved EU AI Act context" instead of naming an article.
+11. Never turn the phrase "AI systems intended to be used for..." into "AI systems are prohibited". A list of intended uses is category evidence, not prohibition evidence, unless the same source explicitly says those uses are prohibited.
+12. For recruitment, hiring, job applicants, or worker management, say the retrieved EU AI Act context lists these systems under employment-related AI uses. Do not say they are banned.
 
 Return:
 
@@ -124,6 +126,8 @@ Validation criteria:
 8. Fail the answer if the answer makes broad claims about fairness, bias, transparency, or accountability without retrieved evidence.
 9. If the answer needs softer wording, mark it as failed.
 10. Fail the answer if it assigns the wrong article number to a claim, especially if Article 4 is used for a topic other than AI literacy.
+11. Fail the answer if it treats "AI systems intended to be used for..." as a prohibition. That wording only describes intended-use categories unless the same source explicitly says the use is prohibited.
+12. For job screening questions, pass only answers that distinguish between listed/regulated employment AI uses and explicitly prohibited AI practices.
 Return exactly in this format:
 
 STATUS: passed or failed
@@ -169,6 +173,9 @@ Revise the answer so that:
 5. It ends with: "This is an informational summary, not legal advice."
 6. Do not mention article numbers unless the retrieved context clearly shows the article heading and the claim comes from that same source.
 7. If the source is an annex/list/category without a visible article number, refer to it as "the retrieved EU AI Act context" instead of naming an article.
+8. Do not say a use case is "prohibited" unless the retrieved context explicitly states that this exact use case is prohibited.
+9. Never turn the phrase "AI systems intended to be used for..." into "AI systems are prohibited". A list of intended uses is category evidence, not prohibition evidence.
+10. For recruitment, hiring, job applicants, or worker management, say the retrieved EU AI Act context lists these systems under employment-related AI uses. Do not say they are banned.
 
 Return:
 
